@@ -136,7 +136,7 @@ int main() {
     init();
     write(fl,data, 4097, 0);
     write(fl, data, TESTFILESIZE, 0);
-    //delete fl;
+    delete fl;
     return 0;
     /**    Debug::debugItem("main..");
         FreeList *fl = new FreeList();
