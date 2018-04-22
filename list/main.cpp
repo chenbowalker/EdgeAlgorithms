@@ -42,11 +42,24 @@ bool write(char *buffer, uint64_t size, uint64_t offset) {
     // delete fl;
 }
 int main() {
+
+
+    FreeList *fl = new FreeList();
+    cout << "init..";
+    init();
+    write(fl,data, 4097, 0);
+    write(fl, data, TESTFILESIZE, 0);
+    delete fl;
+    return 0;
+    /**    Debug::debugItem("main..");
+        FreeList *fl = new FreeList();
+        cout << fl->getSize(); */
+    /**
     cout << "init..";
     init();
     write(data, 4095, 0);
-    /**   FreeList *fl = new FreeList();
-       cout <<fl->getSize();
-       delete fl;*/
-    delete fl;
+    // FreeList *fl = new FreeList();
+    // cout <<fl->getSize();
+    // delete fl;
+    delete fl; */
 }
